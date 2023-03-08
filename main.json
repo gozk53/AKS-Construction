@@ -969,25 +969,33 @@
         "vmSize": "Standard_B4ms",
         "count": 1,
         "minCount": 1,
-        "maxCount": 1,
+        "maxCount": 3,
         "enableAutoScaling": true,
         "availabilityZones": []
       },
       "Standard": {
         "vmSize": "Standard_DS2_v2",
-        "count": 1,
-        "minCount": 1,
-        "maxCount": 1,
+        "count": 3,
+        "minCount": 3,
+        "maxCount": 5,
         "enableAutoScaling": true,
-        "availabilityZones": []
+        "availabilityZones": [
+          "1",
+          "2",
+          "3"
+        ]
       },
       "HighSpec": {
-        "vmSize": "Standard_DS2_v2",
-        "count": 1,
-        "minCount": 1,
-        "maxCount": 1,
+        "vmSize": "Standard_D4s_v3",
+        "count": 3,
+        "minCount": 3,
+        "maxCount": 5,
         "enableAutoScaling": true,
-        "availabilityZones": []
+        "availabilityZones": [
+          "1",
+          "2",
+          "3"
+        ]
       }
     },
     "akssku": "[if(parameters('AksPaidSkuForSLA'), 'Paid', 'Free')]",
