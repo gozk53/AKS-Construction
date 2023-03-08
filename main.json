@@ -969,7 +969,7 @@
         "vmSize": "Standard_B4ms",
         "count": 1,
         "minCount": 1,
-        "maxCount": 3,
+        "maxCount": 1,
         "enableAutoScaling": true,
         "availabilityZones": []
       },
@@ -979,11 +979,15 @@
         "minCount": 1,
         "maxCount": 1,
         "enableAutoScaling": true,
-        "availabilityZones": [
-          "1",
-          "2",
-          "3"
-        ]
+        "availabilityZones": []
+      },
+      "HighSpec": {
+        "vmSize": "Standard_DS2_v2",
+        "count": 1,
+        "minCount": 1,
+        "maxCount": 1,
+        "enableAutoScaling": true,
+        "availabilityZones": []
       }
     },
     "akssku": "[if(parameters('AksPaidSkuForSLA'), 'Paid', 'Free')]",
